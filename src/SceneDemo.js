@@ -37,17 +37,28 @@
 // //批量加载，并创建不同的类型
 // Laya.loader.create([{url:'h5/threeDimen/scene/particle/Example_01.ls','type':Laya.Scene},{url:'h5/threeDimen/staticModel/earth/EarthPlanet.lh','type':Laya.Sprite3D},{url:'h5/threeDimen/skinModel/PangZi/PangZi-doubipangzi.lm','type':Laya.MeshSprite3D}],Laya.Handler.create(this,completeHandler));
 
-//初始化
-Laya3D.init(0, 0, true);
-Laya.stage.scaleMode = Laya.Stage.SCALE_FULL;
-Laya.stage.screenMode = Laya.Stage.SCREEN_NONE;
-Laya.Stat.show();
-//因为只有一个资源 所以我们传进去字符串就可以，队列的话可以传递一个数组队列。
-Laya.loader.create("h5/threeDimen/scene/PBRScene/Demo.ls",Laya.Handler.create(this, this.completeHandler), null, Laya.Scene);
-function completeHandler() {
-    // 第一种方法 获取场景
-    // var scene=Laya.Scene.load("h5/threeDimen/scene/PBRScene/Demo.ls");
-    // 第二种方法，缓存后加载方式
-    var scene = Laya.loader.getRes("h5/threeDimen/scene/PBRScene/Demo.ls");
-    Laya.stage.addChild(scene);
-}
+// //雾化效果
+// //初始化
+// Laya3D.init(0, 0, true);
+// Laya.stage.scaleMode = Laya.Stage.SCALE_FULL;
+// Laya.stage.screenMode = Laya.Stage.SCREEN_NONE;
+// Laya.Stat.show();
+// //因为只有一个资源 所以我们传进去字符串就可以，队列的话可以传递一个数组队列。
+// Laya.loader.create("h5/threeDimen/scene/TerrainScene/XunLongShi.ls",Laya.Handler.create(this, this.completeHandler), null, Laya.Scene);
+// function completeHandler() {
+//     // 第一种方法 获取场景
+//     // var scene=Laya.Scene.load("h5/threeDimen/scene/TerrainScene/XunLongShi.ls");
+//     // 第二种方法，缓存后加载方式
+//     var scene = Laya.loader.getRes("h5/threeDimen/scene/TerrainScene/XunLongShi.ls");
+//     //开启雾化效果
+//     scene.enableFog = true;
+//     //设置雾化颜色
+//     scene.fogColor = new Laya.Vector3(0,0,0.6);
+//     //设置雾化的起始位置，相对于相机的距离
+//     scene.fogStart = 10;
+//     //设置雾化最浓处的距离
+//     scene.fogRange = 40;
+    
+//     Laya.stage.addChild(scene);
+
+// }
